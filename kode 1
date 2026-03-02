@@ -10,4 +10,4 @@ class Cmp142:
         def seat(self):     
                 print(' the ' + self.student +'is seating on the' + self.chairs + 'and her laptop is on' + self.tables)
    
-k2024 =Cmp142( 'Leyla', 'No.5', 'Female', 'C5' ) 
+k2024 =Cmp142( 'Leyla', 'No.5', 'Female', 'C5' )
