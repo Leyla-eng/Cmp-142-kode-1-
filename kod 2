@@ -1,0 +1,11 @@
+class Phone:
+        def __init__(self, color, brand, password):
+                self.color = color           #public
+                self._brand = brand          #protected
+                self.__password = password   #private
+        def call(self):
+                return 'the' +self.color+' '+self._brand+ ' is ringing'
+            
+person1 =Phone('Black ' , 'Apple Phone' , 'Highly confidential')
+person2 =Phone(' White' , 'Samsung Phone' , 'Top Secrete')
+person3 =Phone(' Red' , 'Redmi Phone' , 'xxxxx')
