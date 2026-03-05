@@ -15,13 +15,12 @@ class Asian(Human):
     
     def walk(self):
         return( 'i am asian i can also walk' )
-        
-    def __str__(self):
-        return f" {self.name}, {self.age} "
 
 person1= Asian('Klaus' , '20' )
 person2= Human('Leyla' , '21' )
 
 print(person2.eat())
 print(person2.walk())
-print(person1)
+print(person1.name)
+print(person1.age)
+
