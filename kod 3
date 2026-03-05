@@ -1,0 +1,27 @@
+class Human:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def walk(self):
+        return ( 'Human can walk' )
+    def eat(self):
+        return( 'xxx' )
+
+class Asian(Human):
+    
+    def eat(self):
+        return( 'sss' )
+    
+    def walk(self):
+        return( 'i am asian i can also walk' )
+        
+    def __str__(self):
+        return f" {self.name}, {self.age} "
+
+person1= Asian('Klaus' , '20' )
+person2= Human('Leyla' , '21' )
+
+print(person2.eat())
+print(person2.walk())
+print(person1)
