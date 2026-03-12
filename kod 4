@@ -1,0 +1,48 @@
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    
+    def __init__(self, tires):
+        self.tires = tires 
+        
+    @abstractmethod
+    def start(self):
+        pass
+    
+    def display(self):
+        print( "Vehicle with", self.tires, "tires")
+        
+class Bike(Vehicle):
+    
+    def __init__(self, color):
+        super().__init__(2)
+        self.color = color
+    
+    def start(self):
+        print("Start with kick")
+        
+        
+class Scooter(Vehicle):
+    def __init__(self):
+        super().__init__(2)
+    
+    def start(self):
+        print ("Self start")
+    
+    
+class Car(Vehicle):
+    def __init__(self):
+        super().__init__(4)
+    
+    def start(self):
+        print("Start with key")
+        
+bike = Bike("Black")
+scooty = Scooter()
+car = Car()
+
+
+bike.start()
+bike.display()
+scooty.start()
+car.start()
