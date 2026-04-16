@@ -1,0 +1,19 @@
+class InfussicientBalance(Exception):
+    pass
+
+class MustaphaWallet:
+    def __init__(self,balance):
+        self.balance = balance
+        
+def withdraw(self, amount):
+    if amount > self.balance:
+         raise InfussicientBalance(' please fund the account')
+         self.amount -= amount
+         print('Transaction comleted')
+         
+m1 = MustaphaWallet(10000)
+try:
+    amount = float(input('Enter Amount:'))
+    m1.withdraw(amount)
+except InfussicientBalance as e:
+        print('Mustafa please go and top-up' , e)
