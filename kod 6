@@ -1,0 +1,20 @@
+class Quiz(Exception):
+    pass
+
+class Classroom:
+    def __init__(self, student_count):
+        self.student_count = student_count
+        
+    def check_quiz_status(self):
+        if self.student_count < 16:
+            raise Quiz( 'Not enogh student for quiz')
+        print('We are having a quiz.')
+        
+try:
+    count = int(input('Enter number of students'))
+    my_class = Classroom(count)
+    my_class.check_quiz_status()
+except Quiz as e:
+    print ( 'No Quiz')
+except ValueError:
+    print(' Please enter a valid number.' )
