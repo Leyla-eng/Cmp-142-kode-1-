@@ -1,0 +1,41 @@
+class NoExam(Exception):
+    pass
+
+class Quiz:
+    def conduct(self):
+        print("Quiz will be conducted")
+        
+class Midterm:
+    def conduct(self):
+        print("Midterm will be conducted")
+        
+class FinalExam:
+    def conduct(self):
+        print("Final exam will be conducted")
+        
+class ExamSystem: 
+    def __init__(self, students):
+        self.students = students
+        
+    def decide_exam(self):
+        if self.students <= 5:
+            raise NoExam("No exam needed")
+        else:
+            if self.students <= 10:
+                exam = Quiz()
+            
+            else:
+                if self.students <= 20:
+                    exam = Midterm()
+                
+                else:
+                    exam = FinalExam()
+                    
+            exam.conduct()
+number = int(input("Enter number of students: "))
+system = ExamSystem(number)
+
+try:
+    system.decide_exam()
+except NoExam as e:
+    print(e)
