@@ -1,0 +1,10 @@
+class Character:
+    def __init__(self, name, weapon):
+        self.name = name
+        self.weapon = weapon
+    
+    def fight(self):
+        print(self.name, "attacks with", self.weapon)
+
+hero = Character("Leyla", "Sword")
+hero.fight()
