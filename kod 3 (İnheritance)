@@ -1,3 +1,4 @@
+# What system are trying to develop with this codes?
 class Human:
     def __init__(self, name, age):
         self.name = name
