@@ -1,4 +1,4 @@
-# What system are trying to develop with this codes?
+# What system are trying to develop with this codes? 
 class Human:
     def __init__(self, name, age):
         self.name = name
@@ -8,7 +8,7 @@ class Human:
         return ( 'Human can walk' )
     def eat(self):
         return( 'xxx' )
-
+# Single inheritance why are you inheriting 
 class Asian(Human):
     
     def eat(self):
@@ -16,7 +16,7 @@ class Asian(Human):
     
     def walk(self):
         return( 'i am asian i can also walk' )
-
+# what is the essence of these code (person1= Asian('Klaus' , '20' ); person2= Human('Leyla' , '21' )??
 person1= Asian('Klaus' , '20' )
 person2= Human('Leyla' , '21' )
 
